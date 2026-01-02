@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { savePayment, getPaymentData } from "../actions/useractions";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const UserName = ({ params }) => {
   const [payments, setPayments] = useState([]);
@@ -15,6 +16,18 @@ const UserName = ({ params }) => {
     message: "",
     amount: "",
   });
+
+  const router = useRouter()
+
+  const verifyUser = async() => {
+    const res = await fetch(`/api/user-exist?username=${username}`);
+    const {userExist} = await res.json()
+    if(!userExist){
+      router.push("/")
+    }
+  }
+   verifyUser();
+
 
   const handleChange = (e) => {
     setPaymentData({ ...PaymentData, [e.target.name]: e.target.value });
