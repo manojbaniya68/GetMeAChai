@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GetMeAChai ☕  
+*A community-powered crowdfunding platform*
 
-## Getting Started
+GetMeAChai is a modern web platform where creators receive direct support from their community — **one chai at a time**.  
+It enables fans to support creators easily, securely, and meaningfully, helping ideas grow without barriers.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 What is GetMeAChai?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+GetMeAChai is built for:
+- Content creators
+- Developers
+- Artists
+- Innovators
+- Community builders
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Supporters can contribute small amounts (a “chai”) to motivate creators, while creators can track engagement and support trends through analytics.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Our Mission
 
-To learn more about Next.js, take a look at the following resources:
+Our mission is to **empower creators and builders** by enabling direct, transparent, and community-driven financial support.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We believe great ideas deserve backing without complex barriers, and every small contribution can fuel creativity and innovation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 👤 User Profiles
+Create and manage a personalized creator profile to showcase your work and receive support.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 💳 Secure Payments via eSewa
+Support creators easily and securely using **eSewa**, making payments accessible for local users.
+
+---
+
+## 🧱 Tech Stack
+
+- **Next.js** – React framework for fast, scalable applications
+- **React** – Component-based UI development
+- **Tailwind CSS** – Utility-first styling
+- **MongoDB
+
+---
+
+
