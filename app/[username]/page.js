@@ -17,17 +17,16 @@ const UserName = ({ params }) => {
     amount: "",
   });
 
-  const router = useRouter()
+  const router = useRouter();
 
-  const verifyUser = async() => {
+  const verifyUser = async () => {
     const res = await fetch(`/api/user-exist?username=${username}`);
-    const {userExist} = await res.json()
-    if(!userExist){
-      router.push("/")
+    const { userExist } = await res.json();
+    if (!userExist) {
+      router.push("/");
     }
-  }
-   verifyUser();
-
+  };
+  verifyUser();
 
   const handleChange = (e) => {
     setPaymentData({ ...PaymentData, [e.target.name]: e.target.value });
@@ -39,7 +38,7 @@ const UserName = ({ params }) => {
     const res = await fetch("/api/esewa/payment", {
       method: "POST",
       credentials: "include",
-      body: JSON.stringify({ amount,username }),
+      body: JSON.stringify({ amount, username }),
     });
 
     const data = await res.json();
@@ -113,13 +112,14 @@ const UserName = ({ params }) => {
           8234 members. 39 posts. $123/release
         </div>
       </div>
-      <div className="payment w-[80%] container mx-auto mt-8 pb-10 flex justify-center gap-2">
-        <div className="suppoters bg-slate-900 w-1/2 rounded-lg text-white p-10 ">
+      {/* <div className="payment w-[100%] container mx-auto mt-8 pb-10 flex-col sm:bg-amber-300 sm:flex-row items-center sm:justify-center gap-2"> */}
+      <div className="w-[100vw] mt-8 pb-10 sm:w-[95vw] sm:container sm:mx-auto  flex flex-col items-center sm:flex-row sm:justify-center gap-3">
+        <div className="suppoters bg-slate-900 w-[90vw] min-h-[300px] sm:w-1/2 rounded-lg text-white p-10 ">
           <h2 className="text-lg font-bold mb-4">Recent Supporters</h2>
           <ul className="mx-5">
-            {payments.map((element, index) => (
-              <li key={index} className="flex itemas-center gap-2 mb-2 h-14">
-                <div className="w-[28px] h-6 rounded-full border border-slate-300 p-1 flex justify-center items-center">
+            {payments.length == 0 && (
+              <li className="flex itemas-center gap-2 mb-2 h-14">
+                <div className="w-[28px] h-[28px] rounded-full border border-slate-300 p-1 flex justify-center items-center">
                   <img
                     height={30}
                     width={30}
@@ -127,7 +127,22 @@ const UserName = ({ params }) => {
                     alt="user avatar"
                   />
                 </div>
-                <div>
+                <div>No any suppoters.</div>
+              </li>
+            )}
+            {payments.map((element, index) => (
+              <li key={index} className="flex itemas-center gap-2 mb-2 h-14 w-[100%]">
+                <div className="flex items-center justify-center">
+                  <div className="w-[28px] h-[28px] rounded-full border border-slate-300 p-1 flex justify-center items-center">
+                    <img
+                      height={30}
+                      width={30}
+                      src="/avatar.gif"
+                      alt="user avatar"
+                    />
+                  </div>
+                </div>
+                <div className="text-[15px] sm:text-[16px]">
                   {element.name} donated Rs.{element.amount} with the message
                   {element.message}.
                 </div>
@@ -135,7 +150,7 @@ const UserName = ({ params }) => {
             ))}
           </ul>
         </div>
-        <div className="makePayment bg-slate-900 w-1/2 rounded-lg text-white p-3  ">
+        <div className="makePayment bg-slate-900 w-[90vw] sm:w-1/2 rounded-lg text-white p-3  ">
           <h2 className="text-lg font-bold mb-4">Make a Payment</h2>
           <div className="flex flex-col gap-2 mt-4">
             {/* input for name and message */}

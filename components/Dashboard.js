@@ -52,7 +52,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="container my-5 rounded-lg  mx-auto text-white w-[45vw] flex flex-col justify-center items-center p-6 pb-10">
+    <div className="container my-5 rounded-lg mx-auto text-white sm:w-[45vw] w-[95vw] flex flex-col justify-center items-center p-6 pb-10">
       <h1 className="text-3xl font-bold py-5">Welcome to your Dashboard</h1>
       {/* input for name */}
       <div className="w-full mb-4">

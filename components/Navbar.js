@@ -72,7 +72,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-700 text-white flex justify-between items-center h-12 p-2 px-6">
+    <nav className="bg-gray-700 text-white flex justify-between items-center h-12 p-1 sm:p-2 sm:px-6 gap-5">
       <div className="logo font-bold text-lg">
         <Link href="/">GetMeaChai</Link>
       </div>
@@ -154,7 +154,7 @@ const Navbar = () => {
               id="dropdownHoverButton"
               data-dropdown-toggle="dropdownHover"
               data-dropdown-trigger="hover"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-[14px] sm:text-sm sm:px-5 sm:py-2.5 py-2 px-3 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               type="button"
             >
               {session.user.email}
